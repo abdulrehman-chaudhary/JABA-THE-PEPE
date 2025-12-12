@@ -519,6 +519,10 @@ html {
         gap: 20px;
     }
 
+    .about-parent {
+        padding: 40px;
+    }
+
     .about-child {
         flex-direction: column-reverse;
         width: 95%;
@@ -538,6 +542,10 @@ html {
         max-width: 768px;
         padding: 20px 20px;
         gap: 25px;
+    }
+
+    .about-parent {
+        padding: 40px;
     }
 
     .about-title {
@@ -670,7 +678,7 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 110px;
 }
 
 .col-left {
@@ -707,7 +715,7 @@ html {
     max-width: 390px;
     z-index: 2;
     transform: translateY(-25px);
-    left: 5%;
+    left: -4%;
     position: relative;
 }
 
@@ -770,6 +778,7 @@ html {
     color: rgba(125, 139, 38, 1);
     font-size: var(--h4--);
     text-transform: lowercase;
+    white-space: nowrap;
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -780,6 +789,10 @@ html {
 
     .grid-layout {
         gap: 10px;
+    }
+
+    .center-img {
+        left: 5%;
     }
 
     .col-left,
@@ -821,6 +834,7 @@ html {
     .center-img {
         width: 76%;
         transform: translateY(37px);
+        left: 7%;
     }
 
     .col-left,
@@ -873,10 +887,14 @@ html {
     }
 }
 
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 767px) {
     .bg-glow {
         max-width: 100%;
         transform: translateY(-38%);
+    }
+
+    .token-parent {
+        padding-top: 55px;
     }
 
     .main-title {
@@ -931,6 +949,10 @@ html {
         font-size: 20px;
         transform: translateX(3%);
         top: 5%;
+    }
+
+    .token-parent {
+        padding-top: 55px;
     }
 
     .value-text {
@@ -1090,6 +1112,11 @@ html {
 @media (max-width: 767px) {
     .htb-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .htb-parent {
+        padding: 40px 0;
     }
 
     .htb-child {
@@ -1176,6 +1203,8 @@ html {
     width: 100%;
     max-width: 516px;
     height: auto;
+    position: relative;
+    left: 2%;
 }
 
 .address-container {
@@ -1224,9 +1253,14 @@ html {
         padding: 60px 0;
     }
 
+    .jaba-lightsaber-img {
+        position: relative;
+        left: 3%;
+    }
+
     .address-box {
         padding: 12px 15px;
-        width: 85%;
+        width: 100%;
     }
 
     .address-box input {
@@ -1236,6 +1270,43 @@ html {
 
 /* --- JOIN US MARQUEE --- */
 .marquee-parent {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--secondary-black);
+    border-top: 5px solid var(--primary-green);
+    border-bottom: 5px solid var(--primary-green);
+    display: flex;
+    overflow: hidden; 
+    padding: 20px 0;
+    padding-top: 11px;
+}
+
+.marquee-track {
+    display: flex;
+    white-space: nowrap;
+    width: fit-content;
+    animation: scrollText 20s linear infinite;
+}
+
+.marquee-content {
+    font-size: 80px;
+    line-height: 1;
+    padding: 0 45px;
+    -webkit-text-stroke: 2px var(--primary-green);
+    color: transparent; 
+    text-transform: lowercase;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* .marquee-parent {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -1258,7 +1329,7 @@ html {
     padding: 0 45px;
     -webkit-text-stroke: 2px rgba(125, 139, 38, 1);
     text-transform: lowercase;
-}
+} */
 
 @media (max-width: 768px) {
     .marquee-parent {
@@ -1349,7 +1420,7 @@ html {
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 25px 40px;
+    padding: 27px 40px;
 }
 
 .footer-nav {
@@ -1360,7 +1431,7 @@ html {
 
 .footer-nav a {
     color: var(--secondary-white);
-    font-size: var(--body-2);
+    font-size: var(--body-3);
     text-decoration: none;
     text-transform: lowercase;
 }
@@ -1621,7 +1692,7 @@ html {
 }
 
 .copyright-sidebar {
-    font-size: var(--body-3);
+    font-size: 11px;
     background-color: var(--secondary-black);
     color: var(--secondary-white);
     padding: 10px;
