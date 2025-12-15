@@ -38,8 +38,9 @@ html {
 :root {
     --primary-yellow: #E9952D;
     --primary-green: #7DB826;
-    --gradient: linear-gradient(to right, #7DB826, #E9952D);
+    --gradient: linear-gradient(98.56deg, #7D8B26 0%, #E9952D 100%);
     --secondary-white: #FFFFFF;
+    --secondary-green: rgba(125, 139, 38, 1);
     --secondary-light: #E3E3E3;
     --secondary-gray: #2F2F2F;
     --secondary-black: #000000;
@@ -88,7 +89,7 @@ html {
     padding: 19px 35px;
     border: none;
     border-radius: 6px;
-    background: linear-gradient(98.56deg, #7D8B26 0%, #E9952D 100%);
+    background: var(--gradient);
     color: var(--secondary-white);
     font-weight: 400;
     font-size: var(--h6--);
@@ -185,7 +186,7 @@ html {
     font-weight: 400;
     font-size: var(--h1--);
     line-height: 1.1;
-    background: linear-gradient(98.56deg, #7D8B26 0%, #E9952D 100%);
+    background: var(--gradient);
     background-clip: text;
     color: transparent;
     -webkit-text-stroke: 4px var(--secondary-white);
@@ -251,7 +252,7 @@ html {
     object-fit: contain;
     opacity: 0;
     animation: fadeIn 0.8s ease-out forwards, float 3s ease-in-out infinite;
-    animation-delay: 0.3s, 0s;
+    animation-delay: 0.3s, 0.3s;
 }
 
 @keyframes slideDown {
@@ -553,7 +554,7 @@ html {
     width: 100%;
     max-width: 572px;
     border-radius: 16px;
-    background: linear-gradient(98.56deg, #7D8B26 0%, #E9952D 100%);
+    background: var(--gradient);
     color: var(--secondary-white);
     padding: 43px 40px;
     display: flex;
@@ -820,7 +821,7 @@ html {
 .value-text {
     font-size: var(--h4--);
     text-transform: lowercase;
-    color: rgba(125, 139, 38, 1);
+    color: var(--secondary-green);
 }
 
 .percentage {
@@ -836,11 +837,11 @@ html {
     font-weight: 700;
     line-height: 1.4;
     text-transform: lowercase;
-    color: rgba(125, 139, 38, 1);
+    color: var(--secondary-green);
 }
 
 .highlight-green {
-    color: rgba(125, 139, 38, 1);
+    color: var(--secondary-green);
     font-size: var(--h4--);
     text-transform: lowercase;
     white-space: nowrap;
@@ -1071,7 +1072,7 @@ html {
 
 .htb-main {
     grid-column: span 2;
-    background: linear-gradient(98.56deg, #7D8B26 0%, #E9952D 100%);
+    background: var(--gradient);
     color: var(--secondary-white);
     display: flex;
     flex-direction: row;
@@ -1432,7 +1433,7 @@ html {
     width: 9%;
     top: 14%;
     left: 32%;
-    animation: 20s linear 0s infinite normal none running rotateImage;
+    animation: 20s linear 0s infinite rotateImage;
 }
 
 @keyframes rotateImage {
@@ -1502,7 +1503,7 @@ html {
 }
 
 .footer-right {
-    background-color: rgba(125, 139, 38, 1);
+    background-color: var(--secondary-green);
     display: flex;
     align-items: center;
     gap: 20px;
@@ -1550,7 +1551,7 @@ html {
 
     .copyright-wrapper {
         order: 3;
-        background-color: #000;
+        background-color: var(--secondary-black);
         width: 100%;
         padding: 25px 20px;
     }
@@ -1562,7 +1563,7 @@ html {
 
     .footer-nav-wrapper {
         order: 1;
-        background-color: #000;
+        background-color: var(--secondary-black);
         width: 100%;
         flex: none;
         padding: 40px 20px;
@@ -1723,7 +1724,7 @@ html {
 }
 
 .buy-now-sidebar {
-    background: linear-gradient(98.56deg, #7D8B26 0%, #E9952D 100%);
+    background: var(--gradient);
     color: var(--secondary-white);
     border: none;
     padding: 8px 36px;
@@ -1746,7 +1747,7 @@ html {
     gap: 15px;
     padding: 10px;
     font-weight: bold;
-    background-color: rgba(125, 139, 38, 1);
+    background-color: var(--secondary-green);
     color: var(--secondary-black);
     font-size: var(--h6--);
 }
